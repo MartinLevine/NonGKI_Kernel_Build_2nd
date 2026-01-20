@@ -1,4 +1,4 @@
-name: Build Oneplus 8 Series (crDroid 16 A16)
+name: Build Oneplus 8 Series (LineageOS 22.1 A15)
 
 on:
   workflow_call:
@@ -12,8 +12,8 @@ env:
   CUSTOM_CMDS : "CLANG_TRIPLE=aarch64-linux-gnu-"
   EXTRA_CMDS : "BRAND_SHOW_FLAG=oneplus NM=llvm-nm OBJDUMP=llvm-objdump STRIP=llvm-strip"
 
-  KERNEL_SOURCE : "https://github.com/crdroidandroid/android_kernel_oneplus_sm8250.git"
-  KERNEL_BRANCH : "16.0"
+  KERNEL_SOURCE : "https://github.com/LineageOS/android_kernel_oneplus_sm8250.git"
+  KERNEL_BRANCH : "lineage-22.1"
 
   CLANG_SOURCE : "https://github.com/ZyCromerZ/Clang/releases/download/10.0.1-20220724-release/Clang-10.0.1-20220724.tar.gz"
   CLANG_BRANCH : ""
@@ -46,7 +46,7 @@ env:
   NEED_DTBO : false
   NEED_SAFE_DTBO : false
 
-  ROM_TEXT : "crDroid16_A16"
+  ROM_TEXT : "LineageOS 22.1_A15"
 
   # Other env
   PYTHON_VERSION: "3" # Only 2(Ubuntu 22.04 and Ubuntu 20.04) or 3(Any OS Versions).
@@ -58,8 +58,8 @@ env:
   PATCHES_SOURCE: "JackA1ltman/NonGKI_Kernel_Patches" # [your_name]/[your_patch] -> gooder123/NonGKI_Patcher
   PATCHES_BRANCH: "op_kernel" # [your_branch] -> main
 
-  SUSFS_FOLDER_FIXED: "kona_cos15_a15" # Fill in your patch prefix directory here. Leave it blank if there isn't one. -> your_folder
-  SUSFS_PATCH_FIXED: "susfs_fixed" # Fill in your patches here. If there are multiple patches, please separate them with a comma. Leave it blank if there isn't one. -> patch1,patch2
+  SUSFS_FOLDER_FIXED: "" # Fill in your patch prefix directory here. Leave it blank if there isn't one. -> your_folder
+  SUSFS_PATCH_FIXED: "" # Fill in your patches here. If there are multiple patches, please separate them with a comma. Leave it blank if there isn't one. -> patch1,patch2
 
   REKERNEL_ENABLE: "true" # if u need Re:Kernel.
 
